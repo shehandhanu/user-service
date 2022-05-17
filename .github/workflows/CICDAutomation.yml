@@ -1,7 +1,7 @@
 name: Docker Build Deploy
 on:
   push:
-    branches: [main]
+    branches: [master]
 env:
   DEPLOYMENT_NAME: user-management
   PROJECT_ID: crack-muse-350418
