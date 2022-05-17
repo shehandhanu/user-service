@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-management
+  labels:
+    app: ctse-application
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ctse-application
+  template:
+    metadata:
+      labels:
+        app: ctse-application
+    spec:
+      containers:
+        - name: node-user-management
+          image: shehandhanu/node-user-management:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 4000
